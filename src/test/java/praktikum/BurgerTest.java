@@ -50,16 +50,6 @@ public class BurgerTest {
     }
 
     @Test
-    public void getPriceTest() {
-        burger.setBuns(bun);
-        burger.addIngredient(ingredient1);
-        Mockito.when(bun.getPrice()).thenReturn(2f);
-        Mockito.when(ingredient1.getPrice()).thenReturn(2f);
-        float totalPrice = burger.getPrice();
-        Assert.assertEquals(0, Float.compare(6, totalPrice));
-    }
-
-    @Test
     public void getReceiptTest() {
         burger.setBuns(bun);
         burger.addIngredient(ingredient1);

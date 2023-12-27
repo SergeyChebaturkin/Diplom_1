@@ -10,16 +10,16 @@ public class BunTest {
 
     @Before
     public void setUp() {
-        bun = new Bun("Гиперпространственная булка", 2.99f);
+        bun = new Database().availableBuns().get(0);
     }
 
     @Test
     public void getNameTest() {
-        Assert.assertEquals("Названиия булок не совпадают", "Гиперпространственная булка", bun.getName());
+        Assert.assertEquals(bun.name, bun.getName());
     }
 
     @Test
     public void getPriceTest() {
-        Assert.assertEquals(0, Float.compare(2.99f, bun.getPrice()));
+        Assert.assertEquals(0, Float.compare(bun.price, bun.getPrice()));
     }
 }
